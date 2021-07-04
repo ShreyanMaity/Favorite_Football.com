@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite_Football.com</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Playstation_Img/cones.jpg" class="logo" alt="Football">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="">Football</a></li>
+                    <li><a href="">Kits</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Others</a></li>
+                </ul>
+            </nav>
+            <img src="Playstation_Img/menu.png" class="menu" alt="menu" onclick="toggle()">
+        </div>
+        <div class="row">
+            <div class="col1">
+                <h2>Football <br> BRAZUCA </h2>
+                <h3>Your Dream Football</h3>
+                <p>(Compatible & Generic)</p>
+                <h5 style="text-decoration: line-through;">$15.99</h5>
+                <h4>
+                    $12.99</h4>
+                <button id="buy" onclick="buy()">
+                    Buy Now<img src="Playstation_Img/arrow.png" alt="arrow">
+                </button>
+            </div>
+            <div class="col2">
+                <img src="Playstation_Img/fball.png" alt="ball" class="ball">
+                <div class="colorbox"></div>
+                <div class="add" onclick="add()">
+                    <img src="Playstation_Img/add.png" >
+                    <p><small id="text">Add to Cart</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <div><a href="https://www.facebook.com/" target="_"><img src="Playstation_Img/fb.png" alt="Facebook"></a></div>
+            <div><a href="https://www.twitter.com/" target="_"><img src="Playstation_Img/tw.png" alt="Twitter"></a></div>
+            <div><a href="https://www.instagram.com/" target="_"><img src="Playstation_Img/ig.png" alt="Instagram"></a></div>
+            
+            
+        </div>
+    </div>
+
+
+
+    <Script>
+        let menuList= document.getElementById("menuList")
+        menuList.style.maxHeight="0px";
+        function toggle(){
+            if(menuList.style.maxHeight=="0px"){
+                menuList.style.maxHeight="150px";
+            }
+            else{
+                menuList.style.maxHeight="0px";
+            }
+            
+        }
+        function add(){
+            document.getElementById("text").innerHTML="Item Added";
+            
+        }
+        function buy(){
+            document.getElementById("buy").innerHTML=" Item not available at your loaction"
+        }
+    </Script>
+</body>
+</html>
